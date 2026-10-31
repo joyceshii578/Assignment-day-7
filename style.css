@@ -1,0 +1,91 @@
+:root {
+    --bg: #f2f4f8;
+    --card: #ffffff;
+    --text: #222222;
+    --border: #999999;
+    --accent: #1f3a5f;
+    --accent-text: #ffffff;
+    --warning: orange;
+    --over: red;
+}
+
+body.dark {
+    --bg: #121826;
+    --card: #1e2638;
+    --text: #e8ecf4;
+    --border: #5a6785;
+    --accent: #6ea8fe;
+    --accent-text: #0b1020;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main {
+    max-width: 600px;
+    margin: 32px auto;
+    padding: 24px;
+    background-color: var(--card);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--accent);
+    color: var(--accent-text);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+/* Character counter states */
+.warning {
+    color: var(--warning);
+}
+
+.over {
+    color: var(--over);
+    font-weight: bold;
+}
